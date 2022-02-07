@@ -195,9 +195,6 @@
 /* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H 1
 
-/* Define if SSE intrinsics work. */
-#define HAVE_XMMINTRIN_H 1
-
 /* Define as const if the declaration of iconv() needs const. */
 #define ICONV_CONST 
 

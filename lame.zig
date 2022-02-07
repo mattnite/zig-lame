@@ -62,5 +62,9 @@ pub fn create(b: *std.build.Builder, target: std.zig.CrossTarget, mode: std.buil
         "-DHAVE_CONFIG_H",
     });
 
+    // Define if SSE intrinsics work.
+    if (target.getCpuArch() == .x86_64)
+        ret.defineCMacro("HAVE_XMMINTRIN_H", "1");
+
     return Library{ .step = ret };
 }
